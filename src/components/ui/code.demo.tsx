@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Squares } from "@/components/ui/squares-background";
 import { Preview } from "@/components/ui/Preview";
+import { motion } from "framer-motion";
 
 export function SplineSceneBasic() {
   return (

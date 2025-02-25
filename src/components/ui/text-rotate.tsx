@@ -13,7 +13,13 @@ export interface TextRotateProps {
   initial?: TargetAndTransition | VariantLabels
   animate?: TargetAndTransition | VariantLabels
   exit?: TargetAndTransition | VariantLabels
-  transition?: unknown
+  transition?: {
+    type?: string
+    damping?: number
+    stiffness?: number
+    duration?: number
+    delay?: number
+  }
   staggerDuration?: number
 }
 
@@ -49,7 +55,7 @@ export function TextRotate({
           animate={animate}
           exit={exit}
           transition={{
-            ...transition,
+            ...(transition || {}),
             staggerChildren: staggerDuration,
             staggerDirection: staggerFrom === "first" ? 1 : -1,
           }}
