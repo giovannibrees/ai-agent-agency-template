@@ -1,4 +1,3 @@
-
 'use client';
 
 import { SplineScene } from "@/components/ui/splite";
@@ -6,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Squares } from "@/components/ui/squares-background";
 import { Preview } from "@/components/ui/Preview";
-
 export function SplineSceneBasic() {
   return <div className="w-full bg-black/[0.96]">
       <Card className="border-0 h-[500px] relative overflow-hidden bg-transparent">
@@ -21,10 +19,7 @@ export function SplineSceneBasic() {
             <div className="flex flex-col items-start gap-4">
               <Preview />
             </div>
-            <p className="mt-4 text-neutral-300 max-w-lg">
-              Create powerful API agents that can handle complex tasks. Build, test, and deploy your 
-              solutions with our intuitive platform.
-            </p>
+            <p className="mt-4 text-neutral-300 max-w-lg">Bing AI-powered payments to your app with autonomous transactions, smart fund allocation, and token rewards.</p>
           </div>
 
           {/* Right content */}
