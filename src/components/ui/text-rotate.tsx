@@ -48,7 +48,11 @@ export function TextRotate({
           initial={initial}
           animate={animate}
           exit={exit}
-          transition={transition}
+          transition={{
+            ...transition,
+            staggerChildren: staggerDuration,
+            staggerDirection: staggerFrom === "first" ? 1 : -1,
+          }}
         >
           {texts[textIndex]}
         </motion.div>
