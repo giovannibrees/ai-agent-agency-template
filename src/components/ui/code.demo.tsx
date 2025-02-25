@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Squares } from "@/components/ui/squares-background";
 import { Preview } from "@/components/ui/Preview";
+import { DisplayCardsDemo } from "@/components/ui/display-cards-demo";
 
 export function SplineSceneBasic() {
   return <div className="w-full bg-black/[0.96]">
@@ -25,6 +26,7 @@ export function SplineSceneBasic() {
               Create powerful API agents that can handle complex tasks. Build, test, and deploy your 
               solutions with our intuitive platform.
             </p>
+            <DisplayCardsDemo />
           </div>
 
           {/* Right content */}
