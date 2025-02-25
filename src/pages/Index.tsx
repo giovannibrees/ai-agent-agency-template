@@ -16,13 +16,13 @@ const Index = () => {
         />
       </div>
       <div className="relative z-10">
-        <header className="w-full px-6 py-4">
-          <div className="mx-auto flex max-w-7xl items-center gap-8">
+        <header className="w-full bg-[#060606]/50 backdrop-blur-sm">
+          <div className="mx-auto flex max-w-[1400px] items-center gap-8 px-6 py-4">
             <h1 className="text-2xl font-bold text-white">Reveel Agent API</h1>
             <NavigationMenuDemo />
           </div>
         </header>
-        <main className="mx-auto max-w-7xl px-6 py-12">
+        <main className="mx-auto max-w-[1400px] px-6 py-12">
           <SplineSceneBasic />
         </main>
       </div>
