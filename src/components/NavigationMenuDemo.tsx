@@ -51,49 +51,53 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavigationMenuDemo() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
+    <NavigationMenu className="bg-gradient-to-r from-[#1a1a1a]/50 to-[#2a2a2a]/50 backdrop-blur-sm rounded-lg px-2">
+      <NavigationMenuList className="space-x-2">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10 hover:text-purple-300 data-[state=open]:bg-white/10">
+            Getting started
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-[#1a1a1a] rounded-lg border border-white/10">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-[#8B5CF6]/20 to-[#1EAEDB]/20 p-6 no-underline outline-none focus:shadow-md border border-white/10 transition-all hover:border-purple-500/50"
                     href="/"
                   >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                    <div className="mb-2 mt-4 text-lg font-medium text-white">
+                      Reveel API
                     </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                    <p className="text-sm leading-tight text-gray-300">
+                      Beautifully designed crypto payment integration for modern applications.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
+              <ListItem href="/docs" title="Introduction" className="text-white hover:bg-white/5">
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
+              <ListItem href="/docs/installation" title="Installation" className="text-white hover:bg-white/5">
                 How to install dependencies and structure your app.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
+              <ListItem href="/docs/primitives/typography" title="Typography" className="text-white hover:bg-white/5">
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10 hover:text-purple-300 data-[state=open]:bg-white/10">
+            Components
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-[#1a1a1a] rounded-lg border border-white/10">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
                   href={component.href}
+                  className="text-white hover:bg-white/5"
                 >
                   {component.description}
                 </ListItem>
@@ -102,7 +106,10 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <a className={navigationMenuTriggerStyle()} href="/docs">
+          <a href="/docs" className={cn(
+            navigationMenuTriggerStyle(),
+            "bg-transparent text-white hover:bg-white/10 hover:text-purple-300"
+          )}>
             Documentation
           </a>
         </NavigationMenuItem>

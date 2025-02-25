@@ -16,7 +16,7 @@ const Index = () => {
       </div>
       <div className="relative z-10">
         <header className="w-full px-6 py-4">
-          <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="mx-auto flex max-w-7xl items-center gap-8">
             <h1 className="text-2xl font-bold text-white">Reveel Agent API</h1>
             <NavigationMenuDemo />
           </div>
