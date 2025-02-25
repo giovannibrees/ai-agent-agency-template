@@ -1,6 +1,7 @@
 
 import { Squares } from "@/components/ui/squares-background"
 import { NavigationMenuDemo } from "@/components/NavigationMenuDemo"
+import { SplineSceneBasic } from "@/components/ui/code.demo"
 
 const Index = () => {
   return (
@@ -21,6 +22,9 @@ const Index = () => {
             <NavigationMenuDemo />
           </div>
         </header>
+        <main className="mx-auto max-w-7xl px-6 py-12">
+          <SplineSceneBasic />
+        </main>
       </div>
     </div>
   );
