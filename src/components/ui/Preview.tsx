@@ -6,9 +6,9 @@ import { TextRotate } from "@/components/ui/text-rotate"
 
 function Preview() {
   return (
-    <div className="w-full h-full text-2xl sm:text-3xl md:text-5xl flex flex-row items-start justify-start font-light">
+    <div className="w-full h-full">
       <LayoutGroup>
-        <motion.p className="flex whitespace-pre" layout>
+        <motion.div className="flex whitespace-pre text-2xl sm:text-3xl md:text-5xl font-light" layout>
           <motion.span
             className="text-white pt-0.5 sm:pt-1 md:pt-2"
             layout
@@ -35,7 +35,7 @@ function Preview() {
             transition={{ type: "spring", damping: 30, stiffness: 400 }}
             rotationInterval={2000}
           />
-        </motion.p>
+        </motion.div>
       </LayoutGroup>
     </div>
   )
