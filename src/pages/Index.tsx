@@ -1,5 +1,6 @@
 
 import { Squares } from "@/components/ui/squares-background"
+import { NavigationMenuDemo } from "@/components/NavigationMenuDemo"
 
 const Index = () => {
   return (
@@ -14,7 +15,12 @@ const Index = () => {
         />
       </div>
       <div className="relative z-10">
-        {/* Content will be added in the next iteration */}
+        <header className="w-full px-6 py-4">
+          <div className="mx-auto flex max-w-7xl items-center justify-between">
+            <h1 className="text-2xl font-bold text-white">Reveel Agent API</h1>
+            <NavigationMenuDemo />
+          </div>
+        </header>
       </div>
     </div>
   );
