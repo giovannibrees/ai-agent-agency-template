@@ -6,7 +6,6 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Squares } from "@/components/ui/squares-background";
 import { Preview } from "@/components/ui/Preview";
-import { ExpandableChatDemo } from "@/components/ui/expandable-chat.demo";
 
 export function SplineSceneBasic() {
   return <div className="w-full bg-black/[0.96]">
@@ -26,9 +25,6 @@ export function SplineSceneBasic() {
               Create powerful API agents that can handle complex tasks. Build, test, and deploy your 
               solutions with our intuitive platform.
             </p>
-            <div className="mt-12 h-[600px] relative w-full">
-              <ExpandableChatDemo />
-            </div>
           </div>
 
           {/* Right content */}
