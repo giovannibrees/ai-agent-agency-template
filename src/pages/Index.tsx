@@ -1,6 +1,7 @@
 
 import { NavigationMenuDemo } from "@/components/NavigationMenuDemo"
 import { SplineSceneBasic } from "@/components/ui/code.demo"
+import { DisplayCardsDemo } from "@/components/ui/display-cards-demo"
 
 const Index = () => {
   return (
@@ -16,8 +17,11 @@ const Index = () => {
         </header>
       </div>
       <div className="relative z-10">
-        <main className="w-full">
+        <main className="w-full flex flex-col">
           <SplineSceneBasic />
+          <div className="mb-20">
+            <DisplayCardsDemo />
+          </div>
         </main>
       </div>
     </div>
