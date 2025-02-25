@@ -5,7 +5,7 @@ import { SplineSceneBasic } from "@/components/ui/code.demo"
 const Index = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black">
-      <div className="relative z-10">
+      <div className="relative z-50">
         <header className="w-full bg-black/50 backdrop-blur-sm">
           <div className="mx-auto max-w-[1400px] px-6">
             <div className="flex items-center gap-8 py-4">
@@ -14,6 +14,8 @@ const Index = () => {
             </div>
           </div>
         </header>
+      </div>
+      <div className="relative z-10">
         <main className="w-full">
           <SplineSceneBasic />
         </main>
