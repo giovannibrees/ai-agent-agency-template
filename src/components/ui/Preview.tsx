@@ -14,13 +14,16 @@ function Preview() {
             layout
             transition={{ type: "spring", damping: 30, stiffness: 400 }}
           >
-            Bring your Payment agent to{" "}
+            Build your{" "}
           </motion.span>
           <TextRotate
             texts={[
-              "your app",
-              "your customers",
-              "to life",
+              "next API",
+              "data API",
+              "new bot",
+              "agent 🤖",
+              "workflow",
+              "future",
             ]}
             mainClassName="text-black px-2 sm:px-2 md:px-3 bg-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
             staggerFrom={"last"}
@@ -39,4 +42,3 @@ function Preview() {
 }
 
 export { Preview }
-
