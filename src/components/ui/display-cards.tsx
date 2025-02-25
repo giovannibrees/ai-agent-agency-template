@@ -49,7 +49,7 @@ function DisplayCards({ cards }: { cards: CardProps[] }) {
         </Card>
       ))}
     </div>
-  </div>);
+  );
 }
 
 export default DisplayCards;
