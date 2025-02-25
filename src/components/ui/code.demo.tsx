@@ -1,3 +1,4 @@
+
 'use client';
 
 import { SplineScene } from "@/components/ui/splite";
@@ -5,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Squares } from "@/components/ui/squares-background";
 import { Preview } from "@/components/ui/Preview";
+
 export function SplineSceneBasic() {
   return <div className="w-full bg-black/[0.96]">
       <Card className="border-0 h-[500px] relative overflow-hidden bg-transparent">
@@ -15,14 +17,13 @@ export function SplineSceneBasic() {
         
         <div className="mx-auto max-w-[1400px] px-6 flex h-full">
           {/* Left content */}
-          <div className="flex-1 p-8 relative z-10 flex flex-col justify-center px-0">
-            <div className="flex items-center gap-4">
-              
+          <div className="flex-1 p-8 relative z-10 flex flex-col justify-center items-start px-0">
+            <div className="flex flex-col items-start gap-4">
               <Preview />
             </div>
             <p className="mt-4 text-neutral-300 max-w-lg">
-              Bring your UI to life with beautiful 3D scenes. Create immersive experiences 
-              that capture attention and enhance your design.
+              Create powerful API agents that can handle complex tasks. Build, test, and deploy your 
+              solutions with our intuitive platform.
             </p>
           </div>
 
