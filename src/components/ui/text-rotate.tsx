@@ -1,7 +1,7 @@
 
 "use client"
 
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, TargetAndTransition, VariantLabels } from "framer-motion"
 import { useEffect, useState } from "react"
 
 export interface TextRotateProps {
@@ -10,9 +10,9 @@ export interface TextRotateProps {
   mainClassName?: string
   splitLevelClassName?: string
   staggerFrom?: "first" | "last"
-  initial?: unknown
-  animate?: unknown
-  exit?: unknown
+  initial?: TargetAndTransition | VariantLabels
+  animate?: TargetAndTransition | VariantLabels
+  exit?: TargetAndTransition | VariantLabels
   transition?: unknown
   staggerDuration?: number
 }
