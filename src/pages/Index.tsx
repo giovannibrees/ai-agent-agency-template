@@ -27,7 +27,7 @@ const Index = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
+                className="text-4xl font-bold mb-8 text-center text-gradient-blue"
               >
                 What Is an AI Agent?
               </motion.h2>
