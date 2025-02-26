@@ -9,7 +9,7 @@ export const MainFeatures = () => {
       <div className="max-w-4xl mx-auto text-center">
         <Button 
           size="lg"
-          className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+          className="bg-gradient-to-r from-[#0EA5E9] to-[#22D3EE] hover:from-[#0B8CC7] hover:to-[#1EBAD3] font-inter"
         >
           Get a Free AI Demo
           <ArrowRight className="ml-2 w-5 h-5" />
