@@ -8,7 +8,22 @@ import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { StepCard } from "@/components/cards/StepCard";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Rocket, Clock, MessageCircle, Zap, Target, Users } from "lucide-react";
+import { 
+  ArrowRight, 
+  Sparkles, 
+  Rocket, 
+  Clock, 
+  MessageCircle, 
+  Zap, 
+  Target, 
+  Users, 
+  Calendar,
+  FileText,
+  Mail,
+  Receipt,
+  BellRing,
+  LineChart
+} from "lucide-react";
 import { fadeUpVariants } from "@/utils/animations";
 
 const Index = () => {
@@ -213,19 +228,55 @@ const Index = () => {
                   title="Customer Support"
                   description="AI handles FAQs and customer requests 24/7, freeing up your team."
                 />
+                <FeatureCard
+                  icon={Calendar}
+                  title="Meeting Scheduling"
+                  description="AI manages your calendar, schedules meetings, and sends reminders automatically."
+                />
+                <FeatureCard
+                  icon={FileText}
+                  title="Document Processing"
+                  description="AI extracts data from invoices, contracts, and forms, saving hours of manual work."
+                />
+                <FeatureCard
+                  icon={Mail}
+                  title="Email Management"
+                  description="AI sorts, prioritizes, and drafts responses to emails based on your preferences."
+                />
+                <FeatureCard
+                  icon={Receipt}
+                  title="Expense Tracking"
+                  description="AI categorizes expenses, flags irregularities, and prepares expense reports."
+                />
+                <FeatureCard
+                  icon={BellRing}
+                  title="Market Monitoring"
+                  description="AI tracks competitors, industry news, and trends, keeping you informed."
+                />
+                <FeatureCard
+                  icon={LineChart}
+                  title="Performance Analytics"
+                  description="AI analyzes your business data and provides actionable insights."
+                />
               </div>
-              <div className="text-center">
-                <p className="text-xl text-white/80 mb-8">
-                  💡 Not sure what to automate? Let's discuss your business and find the best AI Agent for you.
+              <motion.div
+                variants={fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="business-card p-8 rounded-xl text-center mb-12"
+              >
+                <h3 className="text-xl font-semibold text-[#0EA5E9] mb-4">And Much More...</h3>
+                <p className="text-white/80 mb-6">
+                  Every business is unique. Our AI agents can be customized to automate your specific workflows and challenges.
                 </p>
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                  className="bg-gradient-to-r from-[#0EA5E9] to-[#38BDF8] hover:from-[#0284C7] hover:to-[#0EA5E9]"
                 >
-                  Let's Talk – Book Your Free Call
+                  Contact Us for a Custom Solution
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-              </div>
+              </motion.div>
             </div>
           </Section>
 
