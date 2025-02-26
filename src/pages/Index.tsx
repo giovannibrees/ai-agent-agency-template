@@ -355,22 +355,30 @@ const Index = () => {
           </Section>
 
           {/* Final CTA Section */}
-          <Section className="bg-gradient-to-t from-black to-black/90 py-24">
+          <Section className="py-32">
             <div className="max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="p-12 rounded-3xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-white/[0.05]"
+                className="p-16 rounded-[32px] bg-[#0A0A16] border border-white/[0.05]"
               >
-                <h2 className="text-3xl font-bold mb-6 text-center">📍 Limited Spots Available</h2>
-                <p className="text-white/80 text-center mb-8">
-                  We work one-on-one with businesses to deploy the right AI solution. Spots are limited.<br /><br />
-                  💡 Let's talk and see if AI is right for your business. No pressure. Just solutions.<br /><br />
-                  ⚡ Grab your free AI consultation before slots fill up.
-                </p>
-                <div className="text-center">
+                <h2 className="text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3">
+                  <span className="text-4xl">📍</span> Limited Spots Available
+                </h2>
+                <div className="space-y-8">
+                  <p className="text-white/80 text-center text-lg">
+                    We work one-on-one with businesses to deploy the right AI solution. Spots are limited.
+                  </p>
+                  <p className="text-white/80 text-center text-lg flex items-center justify-center gap-3">
+                    <span>💡</span> Let's talk and see if AI is right for your business. No pressure. Just solutions.
+                  </p>
+                  <p className="text-white/80 text-center text-lg flex items-center justify-center gap-3">
+                    <span>⚡</span> Grab your free AI consultation before slots fill up.
+                  </p>
+                </div>
+                <div className="text-center mt-12">
                   <Button 
                     size="lg"
                     variant="yellow"
