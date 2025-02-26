@@ -355,7 +355,7 @@ const Index = () => {
           </Section>
 
           {/* Final CTA Section */}
-          <Section className="bg-gradient-to-t from-black to-black/90">
+          <Section className="bg-gradient-to-t from-black to-black/90 py-24">
             <div className="max-w-3xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
