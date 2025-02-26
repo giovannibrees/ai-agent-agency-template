@@ -17,17 +17,16 @@ const Index = () => {
       <div className="relative z-10 flex-grow">
         <main className="w-full">
           <SplineSceneBasic />
-          <MainFeatures />
-
-          {/* What Is an AI Agent Section */}
-          <Section className="bg-gradient-to-b from-black/90 to-black/95">
+          
+          {/* What Is an AI Agent Section - Moved up and reduced spacing */}
+          <Section className="bg-gradient-to-b from-black/90 to-black/95 -mt-24">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
                 variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-3xl font-bold mb-6 text-center"
+                className="text-3xl font-bold mb-4 text-center"
               >
                 What Is an AI Agent?
               </motion.h2>
@@ -36,11 +35,11 @@ const Index = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-xl text-white/80 text-center mb-12"
+                className="text-xl text-white/80 text-center mb-8"
               >
                 An AI Agent is like a virtual employee that automates tasks you don't have time for—without needing a salary, breaks, or training.
               </motion.p>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-6">
                 <FeatureCard
                   icon={MessageCircle}
                   title="Lead Follow-Up"
@@ -62,7 +61,7 @@ const Index = () => {
                   description="Answer customer questions and improve response times"
                 />
               </div>
-              <div className="text-center mt-12">
+              <div className="text-center mt-8">
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
@@ -73,6 +72,8 @@ const Index = () => {
               </div>
             </div>
           </Section>
+
+          <MainFeatures />
 
           {/* Why Your Business Needs AI Section */}
           <Section className="bg-gradient-to-b from-black/95 to-black/90">
