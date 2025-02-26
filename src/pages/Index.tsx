@@ -73,8 +73,12 @@ const Index = () => {
               {authenticated ? (
                 <span className="text-white">Welcome, {username}!</span>
               ) : (
-                <Button onClick={signIn} variant="outline">
-                  Connect Pi Wallet
+                <Button 
+                  onClick={signIn} 
+                  variant="outline"
+                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white border-none"
+                >
+                  Get a Free AI Demo
                 </Button>
               )}
             </div>
