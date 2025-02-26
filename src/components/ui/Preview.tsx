@@ -8,7 +8,7 @@ import { ChevronRight } from "lucide-react"
 
 function Preview() {
   return (
-    <section className="w-full h-[calc(100vh-4rem)] flex items-center justify-center">
+    <section className="w-full h-[100dvh] -mt-16 flex items-center justify-center">
       <LayoutGroup>
         <motion.div className="flex flex-col items-center max-w-4xl mx-auto px-4">
           {/* Top gradient blur effect */}
