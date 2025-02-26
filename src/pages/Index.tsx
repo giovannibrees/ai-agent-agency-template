@@ -308,16 +308,6 @@ const Index = () => {
                   role="Marketing Director"
                 />
               </div>
-              <div className="text-center">
-                <p className="text-xl text-white/80 mb-8">Want to see what AI can do for you?</p>
-                <Button 
-                  size="lg"
-                  variant="yellow"
-                >
-                  Get a Free AI Strategy Call
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
             </div>
           </Section>
 
