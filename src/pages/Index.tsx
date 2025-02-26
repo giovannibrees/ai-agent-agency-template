@@ -19,15 +19,15 @@ const Index = () => {
         <main className="w-full">
           <SplineSceneBasic />
           
-          {/* What Is an AI Agent Section - Moved up and reduced spacing */}
-          <Section className="bg-gradient-to-b from-black/90 to-black/95 -mt-24">
+          {/* What Is an AI Agent Section */}
+          <Section className="bg-gradient-to-b from-black/90 to-black/95 pt-36">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
                 variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="text-3xl font-bold mb-4 text-center"
+                className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent"
               >
                 What Is an AI Agent?
               </motion.h2>
