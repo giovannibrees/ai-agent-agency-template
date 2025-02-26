@@ -1,5 +1,7 @@
+
 import { SplineSceneBasic } from "@/components/ui/code.demo";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { MainFeatures } from "@/components/sections/MainFeatures";
 import { Section } from "@/components/layout/Section";
 import { FeatureCard } from "@/components/cards/FeatureCard";
@@ -8,12 +10,13 @@ import { StepCard } from "@/components/cards/StepCard";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Rocket, Clock, MessageCircle, Zap, Target, Users } from "lucide-react";
+import { fadeUpVariants } from "@/components/cards/FeatureCard";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-black">
+    <div className="relative min-h-screen w-full overflow-hidden bg-black flex flex-col">
       <Header />
-      <div className="relative z-10">
+      <div className="relative z-10 flex-grow">
         <main className="w-full">
           <SplineSceneBasic />
           <MainFeatures />
@@ -22,7 +25,7 @@ const Index = () => {
           <Section className="bg-gradient-to-b from-black/90 to-black/95">
             <div className="max-w-4xl mx-auto">
               <motion.div 
-                variants={FeatureCard.fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-center mb-16"
@@ -345,6 +348,7 @@ const Index = () => {
           </Section>
         </main>
       </div>
+      <Footer />
     </div>
   );
 };

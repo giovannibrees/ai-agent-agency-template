@@ -12,7 +12,7 @@ export const Header = () => {
         <div className="mx-auto max-w-[1400px] px-6">
           <div className="flex items-center justify-between gap-8 py-4">
             <div className="flex items-center gap-8">
-              <h1 className="text-2xl font-bold text-white">Pi AI</h1>
+              <h1 className="text-2xl font-bold text-white">AI EMPIRE</h1>
               <NavigationMenuDemo />
             </div>
             {authenticated ? (
