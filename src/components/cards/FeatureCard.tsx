@@ -1,21 +1,13 @@
 
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
+import { fadeUpVariants } from "../animation/variants";
 
 interface FeatureCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
 }
-
-export const fadeUpVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, delay: 0.1 * i }
-  })
-};
 
 export const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
   <motion.div 
