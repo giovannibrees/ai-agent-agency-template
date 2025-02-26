@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Squares } from "@/components/ui/squares-background";
 import { Preview } from "@/components/ui/Preview";
+import { CheckCircle2 } from "lucide-react";
 
 export function SplineSceneBasic() {
   return <div className="w-full bg-black/[0.96]">
@@ -21,7 +22,18 @@ export function SplineSceneBasic() {
             <div className="flex flex-col items-start gap-4">
               <Preview />
             </div>
-            <p className="mt-4 text-neutral-300 max-w-lg">Bring AI-powered payments to your app with autonomous transactions, smart fund allocation, and Aura rewards.</p>
+            <div className="mt-6 space-y-3">
+              {[
+                "Follow up with leads automatically – never miss a sale",
+                "Get paid faster – AI sends reminders for overdue invoices",
+                "Post to social media without lifting a finger – stay visible effortlessly"
+              ].map((text, i) => (
+                <div key={i} className="flex items-center gap-2 text-neutral-300">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span>{text}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Right content */}
