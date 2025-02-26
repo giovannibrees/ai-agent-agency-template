@@ -3,12 +3,13 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MainFeatures } from "@/components/sections/MainFeatures";
 import { Section } from "@/components/layout/Section";
-import { FeatureCard, fadeUpVariants } from "@/components/cards/FeatureCard";
+import { FeatureCard } from "@/components/cards/FeatureCard";
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { StepCard } from "@/components/cards/StepCard";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Rocket, Clock, MessageCircle, Zap, Target, Users } from "lucide-react";
+import { fadeUpVariants } from "@/utils/animations";
 
 const Index = () => {
   return (
