@@ -8,15 +8,15 @@ import { ChevronRight } from "lucide-react"
 
 function Preview() {
   return (
-    <div className="w-full min-h-[100vh] flex flex-col items-center justify-start pt-20">
+    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       <LayoutGroup>
         <motion.div className="flex flex-col items-center max-w-4xl mx-auto px-4">
           {/* Top gradient blur effect */}
-          <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#0EA5E9]/20 blur-[120px] rounded-full opacity-50 pointer-events-none" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#0EA5E9]/20 blur-[120px] rounded-full opacity-50 pointer-events-none" />
           
           {/* Main heading with gradient */}
           <motion.div 
-            className="text-center mb-6"
+            className="text-center mb-6 relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -44,7 +44,7 @@ function Preview() {
 
           {/* Subheading */}
           <motion.p 
-            className="text-lg sm:text-xl text-white/80 max-w-2xl text-center mb-8 leading-relaxed"
+            className="text-lg sm:text-xl text-white/80 max-w-2xl text-center mb-8 leading-relaxed relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -54,6 +54,7 @@ function Preview() {
 
           {/* CTA Button */}
           <motion.div 
+            className="relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -71,7 +72,7 @@ function Preview() {
           </motion.div>
         </motion.div>
       </LayoutGroup>
-    </div>
+    </section>
   )
 }
 
