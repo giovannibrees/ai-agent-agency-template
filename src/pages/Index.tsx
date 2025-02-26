@@ -10,11 +10,11 @@ import { StepCard } from "@/components/cards/StepCard";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Rocket, Clock, MessageCircle, Zap, Target, Users } from "lucide-react";
-import { fadeUpVariants } from "@/components/animation/variants";
+import { fadeUpVariants } from "@/components/cards/FeatureCard";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#0A0A0A] flex flex-col">
+    <div className="relative min-h-screen w-full overflow-hidden bg-black flex flex-col">
       <Header />
       <div className="relative z-10 flex-grow">
         <main className="w-full">
@@ -22,17 +22,16 @@ const Index = () => {
           <MainFeatures />
 
           {/* What Is an AI Agent Section */}
-          <Section className="bg-gradient-to-b from-[#0A0A0A]/90 to-[#0A0A0A]/95">
+          <Section className="bg-gradient-to-b from-black/90 to-black/95">
             <div className="max-w-4xl mx-auto">
               <motion.div 
                 variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
                 className="text-center mb-16"
               >
-                <h2 className="text-4xl font-bold mb-6 gradient-text">What Is an AI Agent?</h2>
-                <p className="text-xl text-[#E5E7EB] leading-relaxed">
+                <h2 className="text-3xl font-bold mb-6">What Is an AI Agent?</h2>
+                <p className="text-xl text-white/80">
                   An AI Agent is like a virtual employee that automates tasks you don't have time for—without needing a salary, breaks, or training.
                 </p>
               </motion.div>
@@ -71,22 +70,20 @@ const Index = () => {
           </Section>
 
           {/* Why Your Business Needs AI Section */}
-          <Section className="bg-gradient-to-b from-[#0A0A0A]/95 to-[#0A0A0A]/90">
+          <Section className="bg-gradient-to-b from-black/95 to-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
                 className="text-3xl font-bold mb-6 text-center"
               >
                 Why Your Business Needs AI Right Now
               </motion.h2>
               <motion.p 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
                 className="text-xl text-white/80 text-center mb-12"
               >
                 Every day you're losing time, leads, and revenue on tasks that AI could handle.
@@ -141,10 +138,9 @@ const Index = () => {
           <Section className="bg-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
                 className="text-3xl font-bold mb-12 text-center"
               >
                 How It Works
@@ -175,6 +171,179 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
+            </div>
+          </Section>
+
+          {/* What Can an AI Agent Do Section */}
+          <Section className="bg-gradient-to-b from-black/90 to-black/95">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2 
+                variants={FeatureCard.fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="text-3xl font-bold mb-12 text-center"
+              >
+                What Can an AI Agent Do for You?
+              </motion.h2>
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <FeatureCard
+                  icon={MessageCircle}
+                  title="Lead Follow-Up"
+                  description="AI contacts leads instantly, increasing your chances of closing deals."
+                />
+                <FeatureCard
+                  icon={Sparkles}
+                  title="Social Media Management"
+                  description="AI writes and posts for you, keeping your brand active while you focus on business."
+                />
+                <FeatureCard
+                  icon={Clock}
+                  title="Payment Reminders"
+                  description="AI chases overdue invoices and reminds customers to pay on time."
+                />
+                <FeatureCard
+                  icon={Users}
+                  title="Customer Support"
+                  description="AI handles FAQs and customer requests 24/7, freeing up your team."
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-xl text-white/80 mb-8">
+                  💡 Not sure what to automate? Let's discuss your business and find the best AI Agent for you.
+                </p>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                >
+                  Let's Talk – Book Your Free Call
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+            </div>
+          </Section>
+
+          {/* Testimonials Section */}
+          <Section className="bg-black/95">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2 
+                variants={FeatureCard.fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="text-3xl font-bold mb-12 text-center"
+              >
+                Real Businesses. Real Results.
+              </motion.h2>
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                <TestimonialCard
+                  quote="Before AI, we lost leads constantly. Now, AI follows up instantly, and our sales increased by 30%."
+                  author="James W."
+                  role="SaaS Founder"
+                />
+                <TestimonialCard
+                  quote="We used to waste hours chasing invoices. AI sends reminders for us, and late payments dropped by 50%."
+                  author="Lisa M."
+                  role="E-Commerce CEO"
+                />
+                <TestimonialCard
+                  quote="Posting on social media felt impossible. AI now handles it daily—our engagement doubled overnight."
+                  author="Tom R."
+                  role="Marketing Director"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-xl text-white/80 mb-8">Want to see what AI can do for you?</p>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                >
+                  Get a Free AI Strategy Call
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+            </div>
+          </Section>
+
+          {/* Why Now Section */}
+          <Section className="bg-gradient-to-b from-black/95 to-black/90">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2 
+                variants={FeatureCard.fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                className="text-3xl font-bold mb-8 text-center"
+              >
+                Why Now? AI Adoption Is Exploding.
+              </motion.h2>
+              <p className="text-xl text-white/80 text-center mb-12">
+                Businesses that automate now gain a massive advantage over those still doing things manually.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                {[
+                  {
+                    icon: Rocket,
+                    title: "Demand is skyrocketing",
+                    description: "Early adopters are scaling fast."
+                  },
+                  {
+                    icon: Target,
+                    title: "Best solutions are underpriced",
+                    description: "Costs will go up."
+                  },
+                  {
+                    icon: Zap,
+                    title: "Competitors are exploring",
+                    description: "Don't wait until you're playing catch-up."
+                  }
+                ].map((feature, i) => (
+                  <FeatureCard
+                    key={i}
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                  />
+                ))}
+              </div>
+              <div className="text-center">
+                <p className="text-white/80 mb-8">
+                  This is your chance to automate, scale, and dominate your industry.
+                </p>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                >
+                  Let's Talk – Get Your AI Strategy
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+            </div>
+          </Section>
+
+          {/* Final CTA Section */}
+          <Section className="bg-gradient-to-t from-black to-black/90">
+            <div className="max-w-3xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="p-12 rounded-3xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-white/[0.05]"
+              >
+                <h2 className="text-3xl font-bold mb-6 text-center">📍 Limited Spots Available</h2>
+                <p className="text-white/80 text-center mb-8">
+                  We work one-on-one with businesses to deploy the right AI solution. Spots are limited.<br /><br />
+                  💡 Let's talk and see if AI is right for your business. No pressure. Just solutions.<br /><br />
+                  ⚡ Grab your free AI consultation before slots fill up.
+                </p>
+                <div className="text-center">
+                  <Button 
+                    size="lg"
+                    className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                  >
+                    Claim Your Spot – Book Now
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
             </div>
           </Section>
         </main>
