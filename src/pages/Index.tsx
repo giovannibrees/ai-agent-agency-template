@@ -1,4 +1,3 @@
-
 import { SplineSceneBasic } from "@/components/ui/code.demo";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -14,7 +13,7 @@ import { fadeUpVariants } from "@/components/cards/FeatureCard";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-black flex flex-col">
+    <div className="relative min-h-screen w-full overflow-hidden bg-[#0A0A0A] flex flex-col">
       <Header />
       <div className="relative z-10 flex-grow">
         <main className="w-full">
@@ -22,7 +21,7 @@ const Index = () => {
           <MainFeatures />
 
           {/* What Is an AI Agent Section */}
-          <Section className="bg-gradient-to-b from-black/90 to-black/95">
+          <Section className="bg-gradient-to-b from-[#0A0A0A]/90 to-[#0A0A0A]/95">
             <div className="max-w-4xl mx-auto">
               <motion.div 
                 variants={fadeUpVariants}
@@ -30,8 +29,8 @@ const Index = () => {
                 whileInView="visible"
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl font-bold mb-6">What Is an AI Agent?</h2>
-                <p className="text-xl text-white/80">
+                <h2 className="text-4xl font-bold mb-6 gradient-text">What Is an AI Agent?</h2>
+                <p className="text-xl text-[#E5E7EB] leading-relaxed">
                   An AI Agent is like a virtual employee that automates tasks you don't have time for—without needing a salary, breaks, or training.
                 </p>
               </motion.div>
@@ -70,7 +69,7 @@ const Index = () => {
           </Section>
 
           {/* Why Your Business Needs AI Section */}
-          <Section className="bg-gradient-to-b from-black/95 to-black/90">
+          <Section className="bg-gradient-to-b from-[#0A0A0A]/95 to-[#0A0A0A]/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
                 variants={FeatureCard.fadeUpVariants}
@@ -175,7 +174,7 @@ const Index = () => {
           </Section>
 
           {/* What Can an AI Agent Do Section */}
-          <Section className="bg-gradient-to-b from-black/90 to-black/95">
+          <Section className="bg-gradient-to-b from-[#0A0A0A]/90 to-[#0A0A0A]/95">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
                 variants={FeatureCard.fadeUpVariants}
@@ -264,7 +263,7 @@ const Index = () => {
           </Section>
 
           {/* Why Now Section */}
-          <Section className="bg-gradient-to-b from-black/95 to-black/90">
+          <Section className="bg-gradient-to-b from-[#0A0A0A]/95 to-[#0A0A0A]/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
                 variants={FeatureCard.fadeUpVariants}

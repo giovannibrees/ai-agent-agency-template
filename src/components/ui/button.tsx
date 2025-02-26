@@ -40,11 +40,24 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant = "default", size = "default", asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(
+          "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          {
+            "gradient-bg gradient-hover text-white border-0": variant === "default",
+            "bg-[#1A1A1A] text-white hover:bg-[#222222]": variant === "secondary",
+            "gradient-bg gradient-hover text-white border-0": variant === "outline",
+            "bg-[#DC2626] text-white hover:bg-[#B91C1C]": variant === "destructive",
+            "bg-transparent hover:bg-[#1A1A1A]": variant === "ghost",
+            "h-10 px-4 py-2": size === "default",
+            "h-9 rounded-md px-3": size === "sm",
+            "h-11 rounded-md px-8": size === "lg"
+          },
+          className
+        )}
         ref={ref}
         {...props}
       />

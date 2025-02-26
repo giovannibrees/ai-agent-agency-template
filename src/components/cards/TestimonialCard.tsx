@@ -11,12 +11,12 @@ interface TestimonialCardProps {
 export const TestimonialCard = ({ quote, author, role }: TestimonialCardProps) => (
   <motion.div 
     variants={fadeUpVariants}
-    className="p-8 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm"
+    className="p-8 rounded-2xl bg-[#1A1A1A] border border-white/10 backdrop-blur-sm"
   >
-    <p className="text-white/80 mb-6 text-lg">{quote}</p>
-    <div className="text-white/60">
+    <p className="text-[#E5E7EB] mb-6 text-lg leading-relaxed">{quote}</p>
+    <div>
       <p className="font-semibold text-white">{author}</p>
-      <p className="text-sm">{role}</p>
+      <p className="text-[#9CA3AF] text-sm">{role}</p>
     </div>
   </motion.div>
 );

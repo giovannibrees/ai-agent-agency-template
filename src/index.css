@@ -35,36 +35,6 @@
 
     --radius: 0.5rem;
   }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
 }
 
 @layer base {
@@ -74,9 +44,27 @@
 
   body {
     @apply bg-background text-foreground m-0 p-0;
+    font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv02" on;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   #root {
     @apply min-h-screen w-full p-0;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply tracking-tight;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0EA5E9] to-[#22D3EE];
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-[#0EA5E9] to-[#22D3EE];
+}
+
+.gradient-hover {
+  @apply hover:from-[#0B8CC7] hover:to-[#1EBAD3];
 }
