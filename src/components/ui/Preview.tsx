@@ -14,16 +14,13 @@ function Preview() {
             layout
             transition={{ type: "spring", damping: 30, stiffness: 400 }}
           >
-            Build your{" "}
+            Your Own AI Assistant{" "}
           </motion.span>
           <TextRotate
             texts={[
-              "next API",
-              "data API",
-              "new bot",
-              "agent 🤖",
-              "workflow",
-              "future",
+              "To Handle Leads",
+              "For Payments",
+              "For Social Media",
             ]}
             mainClassName="text-black px-2 sm:px-2 md:px-3 bg-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
             staggerFrom={"last"}
