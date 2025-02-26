@@ -41,19 +41,21 @@
   }
 }
 
-/* Add Inter font for better readability */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Typography */
+/* Typography with better contrast */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-inter tracking-tight;
+  @apply font-inter tracking-tight text-white;
+}
+
+p {
+  @apply text-white/90;
 }
 
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0EA5E9] to-[#22D3EE];
 }
 
-/* Professional gradient backgrounds */
 .gradient-bg-subtle {
   @apply bg-gradient-to-r from-slate-900 to-slate-800;
 }
