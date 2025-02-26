@@ -80,7 +80,7 @@ const Index = () => {
           <Section className="bg-gradient-to-b from-black/95 to-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={FeatureCard.fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-6 text-center"
@@ -88,7 +88,7 @@ const Index = () => {
                 Why Your Business Needs AI Right Now
               </motion.h2>
               <motion.p 
-                variants={FeatureCard.fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-xl text-white/80 text-center mb-12"
@@ -145,7 +145,7 @@ const Index = () => {
           <Section className="bg-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={FeatureCard.fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-12 text-center"
@@ -185,7 +185,7 @@ const Index = () => {
           <Section className="bg-gradient-to-b from-black/90 to-black/95">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={FeatureCard.fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-12 text-center"
@@ -233,7 +233,7 @@ const Index = () => {
           <Section className="bg-black/95">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={FeatureCard.fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-12 text-center"
@@ -274,7 +274,7 @@ const Index = () => {
           <Section className="bg-gradient-to-b from-black/95 to-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={FeatureCard.fadeUpVariants}
+                variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-8 text-center"
