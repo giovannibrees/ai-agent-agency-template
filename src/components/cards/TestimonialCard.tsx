@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { fadeUpVariants } from "./FeatureCard";
+import { fadeUpVariants } from "../animation/variants";
 
 interface TestimonialCardProps {
   quote: string;

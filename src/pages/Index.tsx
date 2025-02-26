@@ -1,3 +1,4 @@
+
 import { SplineSceneBasic } from "@/components/ui/code.demo";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -27,6 +28,7 @@ const Index = () => {
                 variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-6 gradient-text">What Is an AI Agent?</h2>
