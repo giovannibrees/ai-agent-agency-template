@@ -1,112 +1,28 @@
-import { NavigationMenuDemo } from "@/components/NavigationMenuDemo";
 import { SplineSceneBasic } from "@/components/ui/code.demo";
-import { usePi } from "@/contexts/PiContext";
+import { Header } from "@/components/layout/Header";
+import { MainFeatures } from "@/components/sections/MainFeatures";
+import { Section } from "@/components/layout/Section";
+import { FeatureCard } from "@/components/cards/FeatureCard";
+import { TestimonialCard } from "@/components/cards/TestimonialCard";
+import { StepCard } from "@/components/cards/StepCard";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Sparkles, Rocket, Clock, MessageCircle, Zap, Target, Users } from "lucide-react";
-
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, delay: 0.1 * i }
-  })
-};
-
-const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <div className={`py-24 ${className}`}>
-    <div className="container mx-auto px-4 max-w-6xl">{children}</div>
-  </div>
-);
-
-const FeatureCard = ({ icon: Icon, title, description }: { icon: any; title: string; description: string }) => (
-  <motion.div 
-    variants={fadeUpVariants}
-    className="p-8 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm hover:bg-white/[0.04] transition-colors"
-  >
-    <Icon className="w-12 h-12 text-indigo-400 mb-6" />
-    <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-    <p className="text-white/60">{description}</p>
-  </motion.div>
-);
-
-const TestimonialCard = ({ quote, author, role }: { quote: string; author: string; role: string }) => (
-  <motion.div 
-    variants={fadeUpVariants}
-    className="p-8 rounded-2xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm"
-  >
-    <p className="text-white/80 mb-6 text-lg">{quote}</p>
-    <div className="text-white/60">
-      <p className="font-semibold text-white">{author}</p>
-      <p className="text-sm">{role}</p>
-    </div>
-  </motion.div>
-);
-
-const StepCard = ({ number, title, description }: { number: string; title: string; description: string }) => (
-  <motion.div 
-    variants={fadeUpVariants}
-    className="flex gap-6"
-  >
-    <div className="text-3xl font-bold text-indigo-400">{number}</div>
-    <div>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-white/60">{description}</p>
-    </div>
-  </motion.div>
-);
+import { ArrowRight, Sparkles, Rocket, Clock, MessageCircle, Zap, Target, Users } from "lucide-react";
 
 const Index = () => {
-  const { authenticated, username, signIn } = usePi();
-
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black">
-      <div className="relative z-50">
-        <header className="w-full bg-black/50 backdrop-blur-sm">
-          <div className="mx-auto max-w-[1400px] px-6">
-            <div className="flex items-center justify-between gap-8 py-4">
-              <div className="flex items-center gap-8">
-                <h1 className="text-2xl font-bold text-white">Pi AI</h1>
-                <NavigationMenuDemo />
-              </div>
-              {authenticated ? (
-                <span className="text-white">Welcome, {username}!</span>
-              ) : (
-                <Button 
-                  onClick={signIn} 
-                  variant="outline"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white border-none"
-                >
-                  Get a Free AI Demo
-                </Button>
-              )}
-            </div>
-          </div>
-        </header>
-      </div>
+      <Header />
       <div className="relative z-10">
         <main className="w-full">
           <SplineSceneBasic />
-          
-          {/* Main Features Section */}
-          <Section className="bg-black/[0.96]">
-            <div className="max-w-4xl mx-auto text-center">
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
-              >
-                Get a Free AI Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </div>
-          </Section>
+          <MainFeatures />
 
           {/* What Is an AI Agent Section */}
           <Section className="bg-gradient-to-b from-black/90 to-black/95">
             <div className="max-w-4xl mx-auto">
               <motion.div 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-center mb-16"
@@ -154,7 +70,7 @@ const Index = () => {
           <Section className="bg-gradient-to-b from-black/95 to-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-6 text-center"
@@ -162,7 +78,7 @@ const Index = () => {
                 Why Your Business Needs AI Right Now
               </motion.h2>
               <motion.p 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-xl text-white/80 text-center mb-12"
@@ -219,7 +135,7 @@ const Index = () => {
           <Section className="bg-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-12 text-center"
@@ -259,7 +175,7 @@ const Index = () => {
           <Section className="bg-gradient-to-b from-black/90 to-black/95">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-12 text-center"
@@ -307,7 +223,7 @@ const Index = () => {
           <Section className="bg-black/95">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-12 text-center"
@@ -348,7 +264,7 @@ const Index = () => {
           <Section className="bg-gradient-to-b from-black/95 to-black/90">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
-                variants={fadeUpVariants}
+                variants={FeatureCard.fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
                 className="text-3xl font-bold mb-8 text-center"
