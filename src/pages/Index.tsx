@@ -80,7 +80,7 @@ const Index = () => {
               <div className="text-center mt-8">
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                  variant="yellow"
                 >
                   Let's Talk – Book Your Free Call
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -147,7 +147,7 @@ const Index = () => {
                 </p>
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                  variant="yellow"
                 >
                   See AI in Action – Book a Free Call
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -187,7 +187,7 @@ const Index = () => {
               <div className="text-center mt-12">
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                  variant="yellow"
                 >
                   Find Your AI Solution – Let's Talk
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -271,7 +271,7 @@ const Index = () => {
                 </p>
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-[#0EA5E9] to-[#38BDF8] hover:from-[#0284C7] hover:to-[#0EA5E9]"
+                  variant="yellow"
                 >
                   Contact Us for a Custom Solution
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -312,7 +312,7 @@ const Index = () => {
                 <p className="text-xl text-white/80 mb-8">Want to see what AI can do for you?</p>
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                  variant="yellow"
                 >
                   Get a Free AI Strategy Call
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -383,7 +383,7 @@ const Index = () => {
                 <div className="text-center">
                   <Button 
                     size="lg"
-                    className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
+                    variant="yellow"
                   >
                     Claim Your Spot – Book Now
                     <ArrowRight className="ml-2 w-5 h-5" />
