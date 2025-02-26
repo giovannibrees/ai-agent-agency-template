@@ -3,21 +3,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MainFeatures } from "@/components/sections/MainFeatures";
 import { Section } from "@/components/layout/Section";
-import { FeatureCard } from "@/components/cards/FeatureCard";
+import { FeatureCard, fadeUpVariants } from "@/components/cards/FeatureCard";
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { StepCard } from "@/components/cards/StepCard";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Rocket, Clock, MessageCircle, Zap, Target, Users } from "lucide-react";
-
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 }
-  }
-};
 
 const Index = () => {
   return (
@@ -31,17 +22,24 @@ const Index = () => {
           {/* What Is an AI Agent Section */}
           <Section className="bg-gradient-to-b from-black/90 to-black/95">
             <div className="max-w-4xl mx-auto">
-              <motion.div 
+              <motion.h2 
                 variants={fadeUpVariants}
                 initial="hidden"
                 whileInView="visible"
-                className="text-center mb-16"
+                viewport={{ once: true }}
+                className="text-3xl font-bold mb-6 text-center"
               >
-                <h2 className="text-3xl font-bold mb-6">What Is an AI Agent?</h2>
-                <p className="text-xl text-white/80">
-                  An AI Agent is like a virtual employee that automates tasks you don't have time for—without needing a salary, breaks, or training.
-                </p>
-              </motion.div>
+                What Is an AI Agent?
+              </motion.h2>
+              <motion.p
+                variants={fadeUpVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="text-xl text-white/80 text-center mb-12"
+              >
+                An AI Agent is like a virtual employee that automates tasks you don't have time for—without needing a salary, breaks, or training.
+              </motion.p>
               <div className="grid md:grid-cols-2 gap-8">
                 <FeatureCard
                   icon={MessageCircle}

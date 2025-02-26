@@ -10,16 +10,19 @@ interface FeatureCardProps {
 
 export const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: (i: number) => ({
+  visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: 0.1 * i }
-  })
+    transition: { duration: 0.5 }
+  }
 };
 
 export const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps) => (
   <motion.div 
     variants={fadeUpVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
     className="p-6 rounded-xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm card-hover"
   >
     <Icon className="w-10 h-10 text-[#0EA5E9] mb-4" />
