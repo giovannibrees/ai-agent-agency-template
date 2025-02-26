@@ -8,9 +8,9 @@ import { ChevronRight } from "lucide-react"
 
 function Preview() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start pt-32">
+    <div className="w-full min-h-[100vh] flex flex-col items-center justify-start pt-20">
       <LayoutGroup>
-        <motion.div className="flex flex-col items-center">
+        <motion.div className="flex flex-col items-center max-w-4xl mx-auto px-4">
           {/* Top gradient blur effect */}
           <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#0EA5E9]/20 blur-[120px] rounded-full opacity-50 pointer-events-none" />
           
