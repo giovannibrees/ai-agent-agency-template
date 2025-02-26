@@ -1,4 +1,3 @@
-
 import { NavigationMenuDemo } from "@/components/NavigationMenuDemo";
 import { SplineSceneBasic } from "@/components/ui/code.demo";
 import { usePi } from "@/contexts/PiContext";
@@ -89,41 +88,6 @@ const Index = () => {
           {/* Main Features Section */}
           <Section className="bg-black/[0.96]">
             <div className="max-w-4xl mx-auto text-center">
-              <motion.h2 
-                variants={fadeUpVariants}
-                initial="hidden"
-                whileInView="visible"
-                className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"
-              >
-                Your Own AI Assistant to Handle Leads, Payments & Social Media – 24/7
-              </motion.h2>
-              <div className="space-y-6 mb-12">
-                {[
-                  "Follow up with leads automatically – never miss a sale",
-                  "Get paid faster – AI sends reminders for overdue invoices",
-                  "Post to social media without lifting a finger – stay visible effortlessly"
-                ].map((text, i) => (
-                  <motion.div
-                    key={i}
-                    variants={fadeUpVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    custom={i}
-                    className="flex items-center gap-3 text-lg text-white/80"
-                  >
-                    <CheckCircle2 className="text-green-400 w-6 h-6 flex-shrink-0" />
-                    <span>{text}</span>
-                  </motion.div>
-                ))}
-              </div>
-              <motion.p
-                variants={fadeUpVariants}
-                initial="hidden"
-                whileInView="visible"
-                className="text-xl text-white/80 mb-12"
-              >
-                You don't need to learn AI or hire a team. Just plug in an AI Agent and let it handle the work.
-              </motion.p>
               <Button 
                 size="lg"
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
