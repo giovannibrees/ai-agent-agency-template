@@ -8,11 +8,11 @@ import { ChevronRight } from "lucide-react"
 
 function Preview() {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <section className="w-full h-[calc(100vh-4rem)] flex items-center justify-center">
       <LayoutGroup>
         <motion.div className="flex flex-col items-center max-w-4xl mx-auto px-4">
           {/* Top gradient blur effect */}
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#0EA5E9]/20 blur-[120px] rounded-full opacity-50 pointer-events-none" />
+          <div className="absolute left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#0EA5E9]/20 blur-[120px] rounded-full opacity-50 pointer-events-none" />
           
           {/* Main heading with gradient */}
           <motion.div 
