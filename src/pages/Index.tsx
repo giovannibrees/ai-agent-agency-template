@@ -310,18 +310,6 @@ const Index = () => {
                   />
                 ))}
               </div>
-              <div className="text-center">
-                <p className="text-white/80 mb-8">
-                  This is your chance to automate, scale, and dominate your industry.
-                </p>
-                <Button 
-                  size="lg"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
-                >
-                  Let's Talk – Get Your AI Strategy
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
             </div>
           </Section>
 
