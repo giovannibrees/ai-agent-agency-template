@@ -67,3 +67,20 @@ p {
 .card-hover {
   @apply transition-all duration-300 hover:bg-white/[0.03] hover:border-white/[0.1];
 }
+
+/* New professional design classes */
+.business-card {
+  @apply relative overflow-hidden backdrop-blur-lg border border-white/10 bg-gradient-to-br from-white/[0.05] to-white/[0.02] shadow-xl;
+}
+
+.section-gradient {
+  @apply bg-gradient-to-b from-black via-slate-900/50 to-black;
+}
+
+.text-gradient-blue {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0EA5E9] to-[#38BDF8];
+}
+
+.button-gradient {
+  @apply bg-gradient-to-r from-[#0EA5E9] to-[#38BDF8] hover:from-[#0284C7] hover:to-[#0EA5E9] text-white font-semibold shadow-lg shadow-blue-500/25;
+}

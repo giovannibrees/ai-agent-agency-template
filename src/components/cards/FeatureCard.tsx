@@ -15,10 +15,12 @@ export const FeatureCard = ({ icon: Icon, title, description }: FeatureCardProps
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-    className="p-6 rounded-xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm card-hover"
+    className="business-card p-8 rounded-xl group"
   >
-    <Icon className="w-10 h-10 text-[#0EA5E9] mb-4" />
-    <h3 className="text-xl font-semibold text-white mb-2 font-inter">{title}</h3>
-    <p className="text-white/90 leading-relaxed font-inter">{description}</p>
+    <div className="relative z-10">
+      <Icon className="w-12 h-12 text-[#0EA5E9] mb-6 group-hover:scale-110 transition-transform duration-300" />
+      <h3 className="text-xl font-semibold text-white mb-3 font-inter">{title}</h3>
+      <p className="text-white/80 leading-relaxed font-inter">{description}</p>
+    </div>
   </motion.div>
 );

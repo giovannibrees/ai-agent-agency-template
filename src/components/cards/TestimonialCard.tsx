@@ -14,12 +14,13 @@ export const TestimonialCard = ({ quote, author, role }: TestimonialCardProps) =
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-    className="p-8 rounded-xl bg-white/[0.02] border border-white/[0.05] backdrop-blur-sm card-hover"
+    className="business-card p-8 rounded-xl relative overflow-hidden"
   >
-    <p className="text-white/90 mb-6 text-lg font-inter leading-relaxed">{quote}</p>
+    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0EA5E9] to-[#38BDF8] opacity-50" />
+    <p className="text-white/90 mb-6 text-lg font-inter leading-relaxed italic">{quote}</p>
     <div className="text-white/70">
       <p className="font-semibold text-white font-inter">{author}</p>
-      <p className="text-sm font-inter">{role}</p>
+      <p className="text-sm font-inter text-[#0EA5E9]">{role}</p>
     </div>
   </motion.div>
 );
