@@ -1,3 +1,4 @@
+
 import { SplineSceneBasic } from "@/components/ui/code.demo";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -32,7 +33,10 @@ const Index = () => {
       <Header />
       <div className="relative z-10 flex-grow">
         <main className="w-full">
-          <SplineSceneBasic />
+          {/* Hide the 3D robot scene on mobile devices */}
+          <div className="hidden sm:block">
+            <SplineSceneBasic />
+          </div>
           
           {/* What Is an AI Agent Section */}
           <Section className="section-gradient pt-20 md:pt-36">
