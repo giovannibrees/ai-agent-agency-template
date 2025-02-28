@@ -1,10 +1,17 @@
 
+import { useState } from "react";
 import { NavigationMenuDemo } from "@/components/NavigationMenuDemo";
 import { Button } from "@/components/ui/button";
 import { usePi } from "@/contexts/PiContext";
+import { ContactForm } from "@/components/ContactForm";
 
 export const Header = () => {
   const { authenticated, username, signIn } = usePi();
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
+  const openContactForm = () => {
+    setIsContactFormOpen(true);
+  };
 
   return (
     <div className="relative z-50">
@@ -19,7 +26,7 @@ export const Header = () => {
               <span className="text-white">Welcome, {username}!</span>
             ) : (
               <Button 
-                onClick={signIn} 
+                onClick={openContactForm} 
                 variant="outline"
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white border-none"
               >
@@ -29,6 +36,7 @@ export const Header = () => {
           </div>
         </div>
       </header>
+      <ContactForm isOpen={isContactFormOpen} onClose={() => setIsContactFormOpen(false)} />
     </div>
   );
 };

@@ -1,12 +1,20 @@
 
 "use client"
 
+import { useState } from "react"
 import { LayoutGroup, motion } from "framer-motion"
 import { TextRotate } from "@/components/ui/text-rotate"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
+import { ContactForm } from "@/components/ContactForm"
 
 function Preview() {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
+  const openContactForm = () => {
+    setIsContactFormOpen(true);
+  };
+
   return (
     <section className="relative w-full h-screen flex items-center justify-center px-4 md:px-6">
       <LayoutGroup>
@@ -64,6 +72,7 @@ function Preview() {
               <Button 
                 size="lg"
                 className="button-gradient text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 relative overflow-hidden group w-full sm:w-auto"
+                onClick={openContactForm}
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   Get Started Free
@@ -75,6 +84,7 @@ function Preview() {
           </div>
         </motion.div>
       </LayoutGroup>
+      <ContactForm isOpen={isContactFormOpen} onClose={() => setIsContactFormOpen(false)} />
     </section>
   )
 }

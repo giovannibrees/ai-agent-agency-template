@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import { SplineSceneBasic } from "@/components/ui/code.demo";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -9,6 +9,7 @@ import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { StepCard } from "@/components/cards/StepCard";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { ContactForm } from "@/components/ContactForm";
 import { 
   ArrowRight, 
   Sparkles, 
@@ -28,6 +29,14 @@ import {
 import { fadeUpVariants } from "@/utils/animations";
 
 const Index = () => {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState("Get Started Free");
+
+  const openContactForm = (title = "Get Started Free") => {
+    setFormTitle(title);
+    setIsContactFormOpen(true);
+  };
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black flex flex-col">
       <Header />
@@ -85,6 +94,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   className="button-gradient text-base md:text-lg px-6 md:px-8 py-4 md:py-6 w-full md:w-auto"
+                  onClick={() => openContactForm("Book Your Free Call")}
                 >
                   Let's Talk – Book Your Free Call
                   <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
@@ -152,6 +162,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   className="button-gradient text-lg px-8 py-6"
+                  onClick={() => openContactForm("Book a Free Call")}
                 >
                   See AI in Action – Book a Free Call
                   <ArrowRight className="ml-2 w-6 h-6" />
@@ -192,6 +203,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   className="button-gradient text-lg px-8 py-6"
+                  onClick={() => openContactForm("Let's Talk About Your AI Solution")}
                 >
                   Find Your AI Solution – Let's Talk
                   <ArrowRight className="ml-2 w-6 h-6" />
@@ -276,6 +288,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   className="button-gradient text-lg px-8 py-6"
+                  onClick={() => openContactForm("Custom Solution Inquiry")}
                 >
                   Contact Us for a Custom Solution
                   <ArrowRight className="ml-2 w-6 h-6" />
@@ -386,6 +399,7 @@ const Index = () => {
                   <Button 
                     size="lg"
                     className="button-gradient text-base md:text-lg px-6 md:px-8 py-4 md:py-6 w-full md:w-auto"
+                    onClick={() => openContactForm("Book Your Spot Now")}
                   >
                     Claim Your Spot – Book Now
                     <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
@@ -397,6 +411,11 @@ const Index = () => {
         </main>
       </div>
       <Footer />
+      <ContactForm 
+        isOpen={isContactFormOpen} 
+        onClose={() => setIsContactFormOpen(false)} 
+        title={formTitle}
+      />
     </div>
   );
 };
